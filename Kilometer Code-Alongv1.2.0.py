@@ -5,6 +5,7 @@
     a. Add more values to a list
     b. Return a value to a specific index
 """
+import random
 myList = []
 def mainProgram(): 
     while True:
@@ -31,7 +32,9 @@ def indexValues():
     print("Ohhh! I heard you need a particular piece of data!")
     indexPos = input("What index position are you curious about?  ")
     print (myList[int(indexPos)])
-
+def randomSearch(): 
+        print("rAnDoM sEaRcH?")
+        print(myList[random.randint(0, len(myList)-1)])
 if __name__ == "__main__": 
 
 
