@@ -53,6 +53,7 @@ def mainProgram():
                     break
         except: 
                 print ("You made a whoopsie!")
+
 def addToList(): 
     print("Adding to a list! Great choice!")
     newItem = input("Type an integer here!  ")
@@ -123,15 +124,15 @@ def interativeBinarySearch(uniqueList, x):
 
 
 def removeNumber():
-    print("We're gonna remove some numbers here!") 
-    removeItem = input("What number do you want to remove?     ")
-    for x in range (len(myList)):
-        if myList[x] == int(removeItem):
-            myList.pop(x)
-        print ("The requested numbers have been removed!  ")
-    else: 
-        print("Your number isn't here!")
+        print("We're gonna remove some numbers here!") 
 
+        removeItem = input("What number do you want to remove?     ")
+        removeItem = int(removeItem)
+        
+        while removeItem in myList:
+            position = myList.index(int(removeItem))
+            myList.pop(position)
+        print ("The requested numbers have been removed!  ")
 def clearList(): 
     clear = input ("Are you sure you want to clear the list? Y/N    ")
     if clear.lower() == "y":
